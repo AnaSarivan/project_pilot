@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Pilot</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <table id="data_display" class="sortable">
+            <thead>
+                <tr>
+                    <!--  <td>Id</td> -->
+                    <td>Name</td>
+                    <td class="sorttable_nosort">Price</td>
+                    <td class="sorttable_nosort">Edit</td>
+                    <td class="sorttable_nosort">Delete</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="input-wrapper">
+            <input type="text" id="in_in">
+            <input type="text" id="in_price">
+            <button onclick="create()">ADD PRODUCT</button>
+        </div>
+        <dialog id="modalPage">
+            <div id="modalOpen">
+                <label class="modalLabel">Change product name</label>
+                <label for="productName">Product Name:</label>
+                <input type="text" id="modalNameInput" name="productName" required>
+            </div>
+            <div>
+                <button id="modalClose" type="reset" onclick="showModal(0)">OK</button>
+            </div>
+        </dialog>
+    </div>
+
+
+
+    <script src="js/loadData.js"></script>
+    <script src="js/createProduct.js"></script>
+    <script src="js/editProduct.js"></script>
+    <script src="js/deleteProduct.js"></script>
+    <script src="js/sorttable.js"></script>
+</body>
+
+</html>
