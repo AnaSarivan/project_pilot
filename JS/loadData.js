@@ -11,6 +11,19 @@ $(document).ready(function () {
         success: function (res) {
 
             res = JSON.parse(res);
+
+            result = `<table>
+                         <thead>
+                             <tr>
+                                 <td class="sorttable_alpha">Name</td>
+                                 <td class="sorttable_numeric">Price</td>
+                                 <td class="sorttable_nosort">Edit</td>
+                                 <td class="sorttable_nosort">Delete</td>
+                             </tr>
+                         </thead>
+                     <tbody>`;
+
+
             var result = "";
             for(let i = 0; i < res.length; i++) {
                 result += "<tr>";                
