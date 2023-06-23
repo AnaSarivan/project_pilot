@@ -33,8 +33,8 @@ table {
 #data_display tr:hover {background-color: #ddd;}
 
 #data_display thead tr td {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 16px 30px;
+   
     text-align: left;
     background-color: #9a0931;
     color: white;
@@ -70,8 +70,6 @@ input {
 	padding: 5px 8px;
 }
 
-
-
 #modalPage {
     display: none;
     flex-direction: column;
@@ -92,7 +90,7 @@ input {
 }
 
 .modalLabel {    
-    font-size: 1.1rem;
+    font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
 }
@@ -102,4 +100,5 @@ input {
     border-radius: 5px;
     color: aliceblue;
 }
+
 
