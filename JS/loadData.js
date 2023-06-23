@@ -1,11 +1,11 @@
 $(document).ready(function () {
-        loadData();
-    });
+    loadData();
+});
 
 
 // #############################################
-    function loadData() {
-        $.ajax({
+function loadData() {
+    $.ajax({
         type: "GET",
         url: "db/getAllproducts.php",
         success: function (res) {
@@ -21,22 +21,25 @@ $(document).ready(function () {
                                  <td class="sorttable_nosort">Delete</td>
                              </tr>
                          </thead>
-                     <tbody>`;
+                         <tbody>`;
 
-
-            var result = "";
-            for(let i = 0; i < res.length; i++) {
-                result += "<tr>";                
-                result += "<td id='editProduct'> " + res[i].name + "</td>";               
+            for (let i = 0; i < res.length; i++) {
+                result += "<tr>";
+                result += "<td id='editProduct'> " + res[i].name + "</td>";
                 result += "<td>" + res[i].price + "</td>";
-                result += "<td><button onclick='openModal("+res[i].id+")'>Edit</button></td>";
+                result += "<td><button onclick='openModal(" + res[i].id + ")'>Edit</button></td>";
                 result += "<td><button onclick='del(" + res[i].id + ")'>Delete</button></td>";
                 result += "</tr>";
             }
-            $("#data_display tbody").html(result);
+
+            result += `  
+                         </tbody>
+                         <tfoot></tfoot>
+                    </table>`;
+
+            $("#data_display").html(result);
+            sorttable.makeSortable($("#data_display table")[0]);
+
         }
     });
-    }
-
-
-    // result += "<td></td>";
+}
