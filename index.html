@@ -16,10 +16,26 @@
 
 <body>
     <div class="wrapper">
+        <div id="data_display"></div>
+
+
+        <div class="input-wrapper">
+            <label>Product name:</label>
+            <br>
+            <input type="text" id="in_in">
+            <br>
+            <br>
+            <label>Product price:</label>
+            <br>
+            <input type="number" step="0.1" id="in_price">
+            <button onclick="create()">ADD PRODUCT</button>
+        </div>
+        <!--
+        <div class="wrapper">
         <table id="data_display" class="sortable">
             <thead>
                 <tr>
-                    <!--  <td>Id</td> -->
+                  
                     <td>Name</td>
                     <td class="sorttable_nosort">Price</td>
                     <td class="sorttable_nosort">Edit</td>
@@ -33,6 +49,7 @@
             <input type="text" id="in_price">
             <button onclick="create()">ADD PRODUCT</button>
         </div>
+         -->
         <dialog id="modalPage">
             <div id="modalOpen">
                 <label class="modalLabel">Change product name</label>
